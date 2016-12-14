@@ -1,4 +1,6 @@
 # Simple Go HTTP client
+[![Build Status](https://travis-ci.org/hooklift/httpclient.svg?branch=master)](https://travis-ci.org/hooklift/httpclient)
+[![GoDoc](https://godoc.org/github.com/hooklift/httpclient?status.svg)](https://godoc.org/github.com/hooklift/httpclient)
 
 Go's default HTTP client is well suited for most use cases but not for all, especially not for those that need a
 long lived HTTP connection. For example:

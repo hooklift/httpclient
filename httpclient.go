@@ -1,4 +1,4 @@
-// Package httpclient adds support for resetable read/write timeouts to Go's HTTP transport and exposes
+// Package httpclient adds support for resettable read/write timeouts to Go's HTTP transport and exposes
 // a not shared HTTP client with sensible timeouts.
 package httpclient
 

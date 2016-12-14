@@ -11,6 +11,8 @@ really difficult and time consuming to find. One specific example is adding or r
 If the former, valid and active connections will be interrupted. If the latter, and the server doesn't write anything back,
 the connection blocks for as long as the operating system decides to time out, usually ~2-3 minutes.
 
+This library will only compiled with Go 1.7 or greater.
+
 ## Features
 
 * Encourages to create a new HTTP client instance for each specific usage.

@@ -11,12 +11,11 @@ really difficult and time consuming to find. One specific example is adding or r
 If the former, valid and active connections will be interrupted. If the latter, and the server doesn't write anything back,
 the connection blocks for as long as the operating system decides to time out, usually ~2-3 minutes.
 
-
 ## Features
 
 * Encourages to create a new HTTP client instance for each specific usage.
 * Allows to set read/write resetable timeout on the underlined TCP connection.
-* It remains context aware and connections can be canceled if the passed context is.
+* Remains context aware and connections can be canceled if the passed context is.
 
 
 ## Example

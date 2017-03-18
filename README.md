@@ -13,11 +13,11 @@ really difficult and time consuming to find. One specific example is adding or r
 If the former, valid and active connections will be interrupted. If the latter, and the server doesn't write anything back,
 the connection blocks for as long as the operating system decides to time out, usually ~2-3 minutes.
 
-This library will only compiled with Go 1.7 or greater.
+This library will only compile with Go 1.7 or greater.
 
 ## Features
 
-* Encourages to create a new HTTP client instance for each specific usage.
+* Encourages to create a new HTTP client instance for each specific use.
 * Allows to set read/write resetable timeout on the underlined TCP connection.
 * Remains context aware and connections can be canceled if the passed context is.
 

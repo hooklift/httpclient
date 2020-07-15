@@ -14,6 +14,7 @@ func ExampleDialContext() {
 		Transport: &http.Transport{
 			DialContext:           httpclient.DialContext(5*time.Second, 5*time.Second),
 			Proxy:                 http.ProxyFromEnvironment,
+			ForceAttemptHTTP2:     true,
 			MaxIdleConns:          100,
 			IdleConnTimeout:       30 * time.Second,
 			TLSHandshakeTimeout:   10 * time.Second,

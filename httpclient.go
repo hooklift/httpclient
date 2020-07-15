@@ -10,11 +10,12 @@ import (
 )
 
 // DialContextFn was defined to make code more readable.
-type dialContextFn func(ctx context.Context, network, address string) (net.Conn, error)
+type DialContextFn func(ctx context.Context, network, address string) (net.Conn, error)
 
 // DialContext implements our own dialer in order to set read and write idle timeouts.
-func DialContext(rwtimeout, ctimeout time.Duration) dialContextFn {
+func DialContext(rwtimeout, ctimeout time.Duration) DialContextFn {
 	dialer := &net.Dialer{Timeout: ctimeout}
+
 	return func(ctx context.Context, network, addr string) (net.Conn, error) {
 		c, err := dialer.DialContext(ctx, network, addr)
 		if err != nil {
@@ -61,6 +62,7 @@ func Default() *http.Client {
 	return &http.Client{
 		Transport: &http.Transport{
 			DialContext:           DialContext(30*time.Second, 10*time.Second),
+			ForceAttemptHTTP2:     true,
 			Proxy:                 http.ProxyFromEnvironment,
 			MaxIdleConns:          100,
 			IdleConnTimeout:       30 * time.Second,

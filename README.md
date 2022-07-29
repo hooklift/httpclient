@@ -18,7 +18,7 @@ This library will only compile with Go 1.7 or greater.
 ## Features
 
 * Encourages to create a new HTTP client instance for each specific use.
-* Allows to set read/write resetable timeout on the underlined TCP connection.
+* Allows to set read/write resetable timeout on the underlying TCP connection.
 * Remains context aware and connections can be canceled if the passed context is.
 
 
